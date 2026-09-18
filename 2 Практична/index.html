@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація на навчальний курс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Реєстрація на курс</h1>
+
+        <form action="#" method="post">
+            
+            <div class="form-group">
+                <label for="fullname">Ім'я та прізвище:*</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Електронна пошта:*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Вік (від 14 до 70):</label>
+                <input type="number" id="age" name="age" min="14" max="70">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Дата народження:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль (мін. 8 символів):*</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Повторіть пароль:*</label>
+                <input type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+            </div>
+
+            <fieldset class="radio-group">
+                <legend>Рівень підготовки:*</legend>
+                <div>
+                    <input type="radio" id="level_beginner" name="level" value="beginner" required>
+                    <label for="level_beginner">Початковий</label>
+                </div>
+                <div>
+                    <input type="radio" id="level_intermediate" name="level" value="intermediate">
+                    <label for="level_intermediate">Середній</label>
+                </div>
+                <div>
+                    <input type="radio" id="level_advanced" name="level" value="advanced">
+                    <label for="level_advanced">Високий</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="checkbox-group">
+                <legend>Теми, які вас цікавлять:</legend>
+                <div>
+                    <input type="checkbox" id="topic_html" name="topics" value="html">
+                    <label for="topic_html">HTML</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="topic_css" name="topics" value="css">
+                    <label for="topic_css">CSS</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="topic_js" name="topics" value="javascript">
+                    <label for="topic_js">JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="topic_angular" name="topics" value="angular">
+                    <label for="topic_angular">Angular</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="format">Бажаний формат навчання:</label>
+                <select id="format" name="format">
+                    <option value="online">Онлайн</option>
+                    <option value="offline">Очно</option>
+                    <option value="blended">Змішаний формат</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="motivation">Чому ви хочете пройти цей курс? (макс. 300 символів):</label>
+                <textarea id="motivation" name="motivation" rows="4" maxlength="300"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Надіслати</button>
+                <button type="reset">Очистити</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
