@@ -1,0 +1,80 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для шапки сайта */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Селектор по id */
+#main-title {
+    margin: 0 0 15px 0;
+    font-size: 32px;
+}
+
+/* Стили для навигации */
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Стили для главного содержимого */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Контейнер для карточек (Flexbox) */
+.courses-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Селектор по общему классу для карточек */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2980b9;
+}
+
+/* Селектор по классу для важного сообщения */
+.important {
+    background-color: #ffeaa7;
+    color: #d63031;
+    padding: 8px;
+    border-left: 4px solid #d63031;
+    font-weight: bold;
+    border-radius: 4px;
+}
