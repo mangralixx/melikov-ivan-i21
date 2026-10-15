@@ -1,0 +1,239 @@
+/* ===== Загальні стилі ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f9;
+  color: #1f2430;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+h3 {
+  margin: 20px 0 12px;
+  font-size: 18px;
+}
+
+/* ===== Шапка ===== */
+.header {
+  background: #14213d;
+  color: #fff;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+/* ===== Flexbox: меню ===== */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+  border-bottom-color: #fca311;
+}
+
+/* ===== CSS Grid: каталог товарів ===== */
+.products {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;               /* картка — колонка, щоб низ завжди був внизу */
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* ===== Flexbox: нижня частина картки ===== */
+.card-bottom {
+  display: flex;
+  justify-content: space-between;   /* ціна зліва, кнопка справа */
+  align-items: center;              /* вирівнювання по центру */
+}
+
+.card-bottom span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button {
+  background: #fca311;
+  color: #14213d;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e08e00;
+}
+
+/* ===== Спільне завдання 1: justify-content ===== */
+.buttons {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+
+  /* Перевірені варіанти:
+     justify-content: flex-start;    — кнопки зліва (початкове значення)
+     justify-content: center;        — кнопки по центру
+     justify-content: flex-end;      — кнопки справа
+     justify-content: space-between; — перша зліва, остання справа, решта рівномірно
+     justify-content: space-around;  — однакові відступи навколо кожної кнопки
+     justify-content: space-evenly;  — однакові проміжки між кнопками і краями
+     Для дизайну магазину обрано center — він відповідає центрованому меню. */
+  justify-content: center;
+}
+
+/* ===== Спільне завдання 2: flex-direction ===== */
+/* flex-direction: row    — елементи розташовуються в рядок (зліва направо), це значення за замовчуванням.
+   flex-direction: column — елементи розташовуються в колонку (зверху вниз).
+   Змінюється головна вісь: у row вона горизонтальна, у column — вертикальна. */
+.direction-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.direction-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.box {
+  background: #14213d;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+}
+
+/* ===== Спільне завдання 3: flex-wrap ===== */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;   /* елементи переходять на наступний рядок, коли немає місця */
+  gap: 20px;
+}
+
+.item {
+  width: 200px;
+  background: #fca311;
+  color: #14213d;
+  font-weight: bold;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ===== Спільне завдання 4: проста Grid-сітка ===== */
+.grid-example {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-example div,
+.adaptive-grid div {
+  background: #14213d;
+  color: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ===== Спільне завдання 5: елемент на 2 колонки ===== */
+.big {
+  grid-column: span 2;   /* перший елемент займає дві колонки, решта зміщується */
+  background: #fca311 !important;
+  color: #14213d !important;
+}
+
+/* ===== Спільне завдання 6: адаптивна Grid-сітка ===== */
+.adaptive-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Нижня частина ===== */
+.footer {
+  background: #14213d;
+  color: #fff;
+  text-align: center;
+  padding: 24px 20px;
+}
+
+.footer p + p {
+  margin-top: 6px;
+  color: #c9cfdc;
+}
+
+/* ===== Мобільна адаптація меню ===== */
+@media (max-width: 600px) {
+  .menu {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+
+  .direction-row {
+    flex-wrap: wrap;
+  }
+}

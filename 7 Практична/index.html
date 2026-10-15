@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Шапка ===== -->
+  <header class="header">
+    <h1 class="logo">Tech Store</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#products">Головна</a></li>
+        <li><a href="#products">Каталог</a></li>
+        <li><a href="#flex-demo">Flexbox</a></li>
+        <li><a href="#grid-demo">Grid</a></li>
+        <li><a href="#footer">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== Популярні товари (CSS Grid) ===== -->
+    <section id="products">
+      <h2>Популярні товари</h2>
+
+      <div class="products">
+
+        <article class="card">
+          <h3>Ноутбук</h3>
+          <p>15.6" екран, процесор Intel Core i5, 16 ГБ ОЗП, SSD на 512 ГБ.</p>
+          <div class="card-bottom">
+            <span>25 000 грн</span>
+            <button>Купити</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Смартфон</h3>
+          <p>Яскравий AMOLED-екран, потужна камера 50 Мп та швидке заряджання.</p>
+          <div class="card-bottom">
+            <span>18 500 грн</span>
+            <button>Купити</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Навушники</h3>
+          <p>Бездротові навушники з активним шумопоглинанням і 30 годинами роботи.</p>
+          <div class="card-bottom">
+            <span>3 200 грн</span>
+            <button>Купити</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Монітор</h3>
+          <p>27" IPS-дисплей, роздільна здатність 2K, частота оновлення 144 Гц.</p>
+          <div class="card-bottom">
+            <span>9 800 грн</span>
+            <button>Купити</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Клавіатура</h3>
+          <p>Механічна клавіатура з RGB-підсвічуванням та зйомним кабелем.</p>
+          <div class="card-bottom">
+            <span>2 400 грн</span>
+            <button>Купити</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Мишка</h3>
+          <p>Ергономічна бездротова мишка з сенсором 16 000 DPI.</p>
+          <div class="card-bottom">
+            <span>1 100 грн</span>
+            <button>Купити</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== Спільне завдання: Flexbox ===== -->
+    <section id="flex-demo">
+      <h2>Flexbox: приклади</h2>
+
+      <h3>1. justify-content (кнопки)</h3>
+      <div class="buttons">
+        <button>Кнопка 1</button>
+        <button>Кнопка 2</button>
+        <button>Кнопка 3</button>
+      </div>
+
+      <h3>2. flex-direction: row</h3>
+      <div class="direction-row">
+        <div class="box">Елемент 1</div>
+        <div class="box">Елемент 2</div>
+        <div class="box">Елемент 3</div>
+      </div>
+
+      <h3>2. flex-direction: column</h3>
+      <div class="direction-column">
+        <div class="box">Елемент 1</div>
+        <div class="box">Елемент 2</div>
+        <div class="box">Елемент 3</div>
+      </div>
+
+      <h3>3. flex-wrap: wrap</h3>
+      <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </section>
+
+    <!-- ===== Спільне завдання: CSS Grid ===== -->
+    <section id="grid-demo">
+      <h2>CSS Grid: приклади</h2>
+
+      <h3>4. Проста Grid-сітка (3 колонки)</h3>
+      <div class="grid-example">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+
+      <h3>5. Елемент на декілька колонок (grid-column: span 2)</h3>
+      <div class="grid-example">
+        <div class="big">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+
+      <h3>6. Адаптивна Grid-сітка</h3>
+      <div class="adaptive-grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Нижня частина ===== -->
+  <footer class="footer" id="footer">
+    <p>&copy; 2026 Tech Store. Усі права захищено.</p>
+    <p>Тел.: +380 00 000 00 00 &nbsp;|&nbsp; info@techstore.ua</p>
+  </footer>
+
+</body>
+</html>
