@@ -1,0 +1,183 @@
+/* ===== before.css — початкова (неоптимізована) версія стилів =====
+   Працює з index-before.html (старі назви класів).
+   Тут навмисно є повторення властивостей і кольорів. */
+
+* { box-sizing: border-box; }
+*::before { box-sizing: border-box; }
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: #f5f7fb;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Заголовки: повторення color і line-height */
+h1 { font-size: 3rem; margin: 0 0 .25rem; color: #1f2937; line-height: 1.2; }
+h2 { font-size: 2rem; margin: 3rem 0 1.5rem; color: #1f2937; line-height: 1.2; }
+h3 { font-size: 1.25rem; margin: 0 0 .5rem; color: #1f2937; line-height: 1.2; }
+
+a { color: #2563eb; }
+
+/* Шапка */
+.header {
+  background: #111827;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+.logo { color: #fff; font-weight: 700; font-size: 1.25rem; text-decoration: none; }
+.nav { display: flex; gap: 1.5rem; }
+.nav a { color: #d1d5db; text-decoration: none; }
+.nav a:hover { color: #fff; }
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 0 1rem;
+}
+.hero__photo {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 6px solid #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+.hero__role { font-size: 1.25rem; color: #2563eb; margin: 0 0 1rem; font-weight: 600; }
+.hero__buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
+
+/* Кнопки: друга кнопка дублює всі властивості першої */
+.btn {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  background: #2563eb;
+  color: #fff;
+  border: 2px solid #2563eb;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.btn:hover { background: #1d4ed8; border-color: #1d4ed8; }
+.btn-outline {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.btn-outline:hover { background: #2563eb; color: #fff; }
+
+/* Навички */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills li {
+  background: #fff;
+  border: 1px solid #d1d5db;
+  padding: .5rem 1.1rem;
+  border-radius: 2rem;
+}
+
+/* Проєкти */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.card {
+  background: #fff;
+  border-radius: .75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+}
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card__body { padding: 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.card__body p { margin: 0 0 1rem; flex: 1; }
+.card__body .btn { align-self: flex-start; }
+
+/* Футер */
+.footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: #111827;
+  color: #d1d5db;
+  text-align: center;
+}
+.footer a { color: #93c5fd; }
+.footer p { margin: .25rem 0; }
+
+/* Планшети */
+@media (max-width: 900px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.75rem; margin: 2.5rem 0 1.25rem; }
+  .hero { gap: 2rem; padding-top: 3rem; }
+  .hero__photo { width: 220px; height: 220px; }
+  .projects { gap: 1.5rem; }
+}
+
+/* Смартфони */
+@media (max-width: 600px) {
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.5rem; margin: 2rem 0 1rem; }
+  h3 { font-size: 1.1rem; }
+
+  .header__inner { flex-direction: column; gap: .5rem; }
+  .nav { flex-wrap: wrap; justify-content: center; gap: .5rem 1rem; }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+    padding: 2rem 0 .5rem;
+  }
+  .hero__photo { width: 60vw; height: 60vw; max-width: 220px; max-height: 220px; }
+
+  .hero__buttons { flex-direction: column; width: 100%; }
+  .btn { width: 100%; }
+  .btn-outline { width: 100%; }
+  .card__body .btn { align-self: stretch; }
+
+  .skills { justify-content: center; }
+
+  .projects { grid-template-columns: 1fr; gap: 1.25rem; }
+  .card img { height: 180px; }
+
+  .footer { margin-top: 2.5rem; }
+}
